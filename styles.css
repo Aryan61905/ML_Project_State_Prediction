@@ -1,0 +1,171 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(32, 32, 32);
+}
+.navbar {
+    background-color: #1E40AF;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    border-radius: 10px;
+}
+.nav-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.nav-links {
+    display: flex;
+    gap: 15px;
+    position: relative;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+}
+.nav-slider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 60px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #1E40AF;
+    padding: 10px;
+}
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.command-prompt {
+    margin: 10% auto;
+    padding: 15px;
+    background-color: black;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    border: 2px solid #00ff00;
+    width: 80%;
+    height: 500px;
+    white-space: pre-wrap;
+    overflow: scroll;
+}
+
+#content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    max-width: 90%;
+    overflow: hidden;
+}
+
+.scrollable-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    overflow: auto;
+    height: 500px; /* Set a fixed height */
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 25%;
+    position: relative; /* Make sure the slider can be positioned relative to this container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 100%; /* Ensure it doesn't exceed the container */
+}
+
+.team-button {
+    
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    padding: 10px;
+    left:10px;
+    width:95%;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(to right, white 50%, black 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
+
+.team-button:hover {
+    background-position: left bottom;
+    color: black;
+}
+
+.team-slider {
+    position: absolute;
+    left: 0; /* Adjust this value to position the slider correctly */
+    top: 0;
+    width: 5px; /* Fixed width for the slider */
+    height: 0; /* Initially no height */
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    display: block; /* Ensure it is displayed */
+}
+
+
+.player-list {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 5px;
+    column-gap: 10px;
+    padding: 10px;
+    background-color: black;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 100%; /* Ensure it doesn't exceed the container */
+}
+
+.player-list p {
+    margin: 2px 0;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+   
+}
+
+
+
+
+

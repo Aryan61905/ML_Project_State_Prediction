@@ -1,0 +1,34 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        
+        <div class="nav-container">
+            <div class="nav-slider"></div>
+            <div class="nav-links">
+                <a href="#players" onclick="moveSlider(this); fetchData('players')">Players</a>
+                <a href="#stats" onclick="moveSlider(this); fetchData('stats')">Stats</a>
+                <a href="#data" onclick="moveSlider(this); fetchData('data')">Data</a>
+            </div>
+        </div>
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#players" onclick="toggleMenu(); fetchData('players')">Players</a>
+        <a href="#team" onclick="toggleMenu(); fetchData('team')">Team</a>
+        <a href="#stats" onclick="toggleMenu(); fetchData('stats')">Stats</a>
+        <a href="#data" onclick="toggleMenu(); fetchData('data')">Data</a>
+    </div>
+    <div id="content" class="command-prompt">
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
